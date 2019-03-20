@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/entry.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="headerLeft">
+					<img src="img/logo.jpg">
+				</div>
+				<div class="headerRight">
+					<span>嘿，欢迎来到美鲜冻品商城!</span>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="contenta">
+				<div class="contentb">
+					<div class="contentbLeft">
+						<span><a>登录</a></span>
+					</div>
+					<div class="contentbRight">
+						<span><a>验证码登录</a></span>
+					</div>
+				</div>	
+				
+			<form action="user.php" method="get">
+				<div class="contentbLeftlists">
+					<div class="contentbLeftlist" id="lefta">
+						<input id="contentLeft" class="contentbLeftlistA" type="text" placeholder="请输入用户名/邮箱/手机号码"/></br>
+						<input class="contentbLeftlistB" type="text" placeholder="请输入密码"/></br>
+						<input class="contentbLeftlistC" type="text" placeholder="请输入验证码"/></br>
+						<input class="contentbLeftlistD" type="checkbox"/><span class="contentbLeftlistF">记住我</span><span class="contentbLeftlistE" ><a href="#">忘记密码</a></span>			
+						<input class="contentbLeftlistG"  type="button" value="登录" />
+					</div>
+					<div class="contentbLeftlist" id="leftb">
+						<input class="contentbLeftlistA" type="text" placeholder="请输入手机号码"/></br>
+						<input class="contentbLeftlistH" type="text" placeholder="请输入右侧验证码"/></br>
+						<input  class="articleLeftMessage" type="text" placeholder="请输入短信验证码"/><p class="articleLefta"><a href="#">获取短信验证码</a><p>
+						<p class="contentbLeftlistI">注：验证码60秒内有效，过期请从新获取</p>
+						<input class="contentbLeftlistG"  type="button" value="登录" />
+						<p class="contentbLeftlistK">没有账号,<a href="Registration.html">去注册&gt</a></p>		
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/cookieTools.js"></script>
+<script>
+	
+	$(".contentbLeft").click(
+		function(){
+		$(".contentbLeft").css({"backgroundColor":"#fff"});
+		$(".contentbRight").css({"backgroundColor":"#eee"});
+		$("#lefta").css({"display":"block"});
+		$("#leftb").css({"display":"none"});
+	})
+		
+	
+	
+	$(".contentbRight").click(
+		function(){
+		$(".contentbRight").css({"backgroundColor":"#fff"});
+		$(".contentbLeft").css({"backgroundColor":"#eee"});
+		$("#lefta").css({"display":"none"});
+		$("#leftb").css({"display":"block"});
+	})
+		
+	
+	
+	
+	
+	 $(".contentbLeftlistG").click(function(){
+        let usernameVal = $(".contentbLeftlistA").val();
+        let userpassVal = $(".contentbLeftlistB").val();
+        let str = "username="+usernameVal+"&userpass="+userpassVal;
+        if(usernameVal!="" && userpassVal!=""){
+            $.ajax({
+                type:"post",
+                url:"php/user.php",
+                data:str,
+                success:function(data){
+                    if(data==1){
+                        addCookie('username',usernameVal,7);
+                        location.href = "index.html";
+                    }
+                    else{
+                       alert("密码有误，请从新输入")
+                    }
+                }
+            })
+        }
+        else{
+            alert("密码错误")
+        }
+
+    })
+</script>

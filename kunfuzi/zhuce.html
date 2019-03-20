@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+
+	<script src="cookieTools.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+	<div id="wwww">
+		<div class="w">
+			<div class="shouHear">
+				<a href="">
+					<img src="img/logo-220.png"/>
+				</a>
+				<div class="NewIdes">
+					<a	id="idSpandenlu" href=""></a>
+					<a href="">给新版提建议</a>
+				</div>
+			</div>
+		</div>
+		<div class="zhong">
+			<div class="deng">
+				<div class="denglu">
+					<div class="zhuce">
+						<h1>注册</h1>
+						<span>
+							<a href="demglu.html">已有账号    快速登录</a>
+						</span>
+					</div>
+					<div class="inputText">
+						<form action="" method="post">
+							<div class="InpTx">
+								<input type="text" id="vipid" placeholder="手机号" />
+								<span  id="idSpan"></span>
+							</div>
+							<div class="InpTx yanzhenceshi">
+								<input type="text" id="" placeholder="短信验证码" />
+								<span>验证码</span>
+								<span>须为6位数字</span>
+								<span>输入验证码</span>
+							</div>
+							<div class="InpTx">
+								<input type="text" id="vipname" placeholder="请输入用户名" />
+								<span>请输入用户名</span>
+							</div>
+							<div class="InpTx">
+								<input type="password" id="vippass" placeholder="下次自动登陆" />
+								<span>请设置密码</span>
+							</div>
+							<div class="InpTx InpTxXieYI">
+								<input type="checkbox" id="" name="s" />
+								<p>我已阅读并接受孔网 
+									<a href="">《服务协议》</a>和
+									<a href="">《账户协议》</a> 
+								</p>
+							</div>
+							<input type="button" id="sub" class="" value="注册"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="foot">
+		<div class="footOn">
+			<span>© 2002-2017 Kongfz.com 孔夫子旧书网 版权所有
+			 </span>
+			<span>
+				<a href="">关于孔网</a>
+				<a href="">联系我们</a>
+				<a href="">帮助中心</a>
+				<a href="">版权隐私</a>
+				<a href="">广告业务</a>
+				<a href="">工作机会</a>
+				<a href="">移动版</a>
+			</span>	
+		</div>
+	</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function $(id){
+    return document.getElementById(id);
+}
+window.onload = function(){
+    //判断用户名是否已被注册
+   $("vipid").onblur = function(){
+    //创建对象
+    let xhr = new XMLHttpRequest();
+    //设置请求参数
+    xhr.open("get","zhucepan.php?vipid="+this.value,true);
+    //设置回调函数
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            if(xhr.responseText=="0"){
+                $("idSpan").innerHTML = "恭喜您，该用户未被注册";
+                $("idSpan").style.color = "green";
+            }else{
+                $("idSpan").innerHTML = "对不起，该用户已被注册";
+                $("idSpan").style.color = "red";
+            }
+        }
+
+    }
+    xhr.send();
+    }
+    //注册
+    $("sub").onclick = function(){
+        //创建对象
+        let xhr = new XMLHttpRequest();
+        //设置请求参数
+        xhr.open("post","zhuceCheck.php",true);
+        //设置回调函数
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                let str = xhr.responseText;
+                console.info(str);
+                if(str=="0"){
+                    alert("注册成功！");
+                    location.href="demglu.html";
+                }else{
+                    $("idSpan").innerHTML="注册失败，服务器出错！";
+                }
+            }
+        }
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        let sendStr="vipid="+$("vipid").value+"&vipname="+$("vipname").value+"&vippass="+$("vippass").value;
+        xhr.send(sendStr);
+    }
+}
+</script>

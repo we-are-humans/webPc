@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+input {
+  border: none;
+  outline: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*瑙ｅ喅楂樺害濉岄櫡*/
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
+
+#header .comWidth {
+  width: 990px;
+  margin: 0 auto; }
+  #header .comWidth .logo {
+    margin-top: 20px; }
+    #header .comWidth .logo a {
+      margin-right: 10px; }
+    #header .comWidth .logo i {
+      display: inline-block;
+      width: 110px;
+      height: 40px;
+      background: url("../img/l-icon.png"); }
+  #header .comWidth > a {
+    position: relative;
+    top: 52px;
+    color: #999;
+    font-size: 12px; }
+    #header .comWidth > a img {
+      vertical-align: middle; }
+
+#section .tips {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0;
+  color: #999; }
+  #section .tips i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon-tips.png");
+    vertical-align: middle;
+    margin-right: 5px; }
+  #section .tips p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px; }
+    #section .tips p a {
+      color: #000; }
+      #section .tips p a:hover {
+        border-bottom: 1px solid #000; }
+#section .bannerBox {
+  background: #bd0200; }
+  #section .bannerBox .banner {
+    position: relative;
+    width: 990px;
+    height: 475px;
+    margin: 0 auto;
+    background: url("../img/31ce01f6ba0123e1.png"); }
+    #section .bannerBox .banner .login {
+      width: 346px;
+      min-height: 390px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background: #fff; }
+      #section .bannerBox .banner .login .tips {
+        line-height: 40px;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.1); }
+        #section .bannerBox .banner .login .tips i {
+          vertical-align: middle;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: url("../img/aa.png"); }
+        #section .bannerBox .banner .login .tips p {
+          vertical-align: middle;
+          display: inline-block;
+          font-size: 12px;
+          color: #999; }
+      #section .bannerBox .banner .login .tabs {
+        margin-top: 15px; }
+        #section .bannerBox .banner .login .tabs .tabs_tit {
+          height: 35px;
+          font-size: 0; }
+          #section .bannerBox .banner .login .tabs .tabs_tit a {
+            display: inline-block;
+            width: 123px;
+            padding-left: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #999;
+            opacity: 0.7; }
+          #section .bannerBox .banner .login .tabs .tabs_tit a.active {
+            color: red; }
+        #section .bannerBox .banner .login .tabs .tabs_body .tabs_con {
+          display: none;
+          position: relative; }
+          #section .bannerBox .banner .login .tabs .tabs_body .tabs_con .min {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            min-height: 147px; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con .min img:nth-of-type(1) {
+              position: absolute;
+              left: 95px; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con .min img:nth-of-type(2) {
+              position: absolute;
+              right: -10px;
+              top: -2px;
+              transform: scale(0); }
+          #section .bannerBox .banner .login .tabs .tabs_body .tabs_con .ewm {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            opacity: 0.8;
+            margin-bottom: 20px; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con .ewm a {
+              margin-right: 15px; }
+          #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul {
+            overflow: hidden;
+            margin-left: 40px; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul li {
+              float: left;
+              font-size: 12px;
+              color: #666;
+              margin-right: 20px; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul li i {
+                vertical-align: middle;
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                background: url("../img/qr-coagent.png"); }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul li .one {
+                background-position: 0 0; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul li .two {
+                background-position: -50px 0; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con ul li .three {
+                background-position: -100px 0; }
+          #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form {
+            padding-top: 20px;
+            border-top: 1px solid #dedede; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item {
+              width: 304px;
+              height: 38px;
+              font-size: 0;
+              margin: 0 auto 20px; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item label {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+                background: url("../img/pwd-icons-new1.png");
+                border: 1px solid #dedede;
+                border-right: 0;
+                float: left; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item .label1 {
+                background-position: 0 0; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item .label2 {
+                background-position: -48px 0; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item .inputBox {
+                font-size: 0;
+                float: left;
+                width: 263px;
+                height: 38px;
+                border: 1px solid #dedede; }
+                #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .item .inputBox input {
+                  line-height: 14px;
+                  padding: 12px 0;
+                  padding-left: 8px; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .forget {
+              padding-right: 18px;
+              font-size: 12px; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .forget a {
+                float: right;
+                color: #626262; }
+            #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .btn {
+              text-align: center;
+              margin-top: 20px; }
+              #section .bannerBox .banner .login .tabs .tabs_body .tabs_con form .btn input {
+                width: 304px;
+                height: 33px;
+                background: red; }
+      #section .bannerBox .banner .login .regMethod {
+        width: 100%;
+        line-height: 50px;
+        margin-top: 20px; }
+        #section .bannerBox .banner .login .regMethod ul {
+          padding: 0 10px;
+          overflow: hidden; }
+          #section .bannerBox .banner .login .regMethod ul li {
+            float: left; }
+            #section .bannerBox .banner .login .regMethod ul li a i {
+              vertical-align: middle;
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+              background: url("../img/QQ-weixin.png"); }
+            #section .bannerBox .banner .login .regMethod ul li a .a1 {
+              background-position: 0 0; }
+            #section .bannerBox .banner .login .regMethod ul li a .a2 {
+              background-position: -18px 0; }
+            #section .bannerBox .banner .login .regMethod ul li a span {
+              vertical-align: middle; }
+            #section .bannerBox .banner .login .regMethod ul li a b {
+              vertical-align: middle;
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              background: url("../img/pwd-icons-new.png");
+              background-position: -104px -75px; }
+            #section .bannerBox .banner .login .regMethod ul li a p {
+              display: inline-block;
+              font-size: 14px;
+              color: red; }
+          #section .bannerBox .banner .login .regMethod ul li:nth-of-type(2) {
+            margin-left: 15px; }
+          #section .bannerBox .banner .login .regMethod ul li:nth-of-type(3) {
+            float: right; }
+
+/*# sourceMappingURL=login.css.map */

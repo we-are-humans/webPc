@@ -1,0 +1,151 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none; }
+
+input {
+  border: none;
+  outline: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*瑙ｅ喅楂樺害濉岄櫡*/
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
+
+#header {
+  width: 100%;
+  height: 110px;
+  background: url("../img/headbg.jpg") repeat-x left bottom; }
+  #header .w {
+    width: 1210px;
+    margin: 0 auto; }
+    #header .w .logo {
+      margin-top: 24px; }
+      #header .w .logo a {
+        float: left;
+        width: 160px;
+        height: 50px;
+        background: red;
+        background: url("../img/icon.png"); }
+      #header .w .logo h3 {
+        float: left;
+        font-weight: 100;
+        margin-top: 15px; }
+    #header .w .has_count {
+      margin-top: 60px; }
+      #header .w .has_count span {
+        color: #626262;
+        opacity: 0.7;
+        margin-right: 5px; }
+      #header .w .has_count a {
+        color: orangered;
+        font-size: 16px; }
+
+#container {
+  width: 1210px;
+  margin: 0 auto; }
+  #container .progress-bar {
+    width: 400px;
+    margin: 80px auto 0;
+    overflow: hidden;
+    position: relative; }
+    #container .progress-bar .step {
+      float: left; }
+      #container .progress-bar .step span {
+        display: block;
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        background: url("../img/reg-icon.png"); }
+      #container .progress-bar .step .s1 {
+        background-position: 0 -200px; }
+      #container .progress-bar .step .s2, #container .progress-bar .step .s3 {
+        background-position: -45px -200px;
+        color: #626262;
+        opacity: 0.7; }
+      #container .progress-bar .step p {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #626262;
+        opacity: 0.7; }
+    #container .progress-bar .line {
+      float: left;
+      width: 124px;
+      height: 10px;
+      position: absolute;
+      top: 7px;
+      background: url("../img/reg-icon.png");
+      background-position: 0 -100px; }
+    #container .progress-bar .line1 {
+      left: 55px; }
+    #container .progress-bar .line2 {
+      left: 228px; }
+    #container .progress-bar .step2 {
+      margin-left: 106px; }
+    #container .progress-bar .step3 {
+      margin-left: 112px; }
+  #container .main {
+    width: 400px;
+    margin: 50px auto 186px; }
+    #container .main .formBox form .phoneBox {
+      height: 86px; }
+      #container .main .formBox form .phoneBox .phone {
+        width: 400px;
+        height: 50px;
+        font-size: 0; }
+        #container .main .formBox form .phoneBox .phone label {
+          float: left;
+          display: inline-block;
+          width: 86px;
+          height: 50px;
+          line-height: 50px;
+          padding-left: 20px;
+          border: 1px solid #dedede;
+          font-size: 14px;
+          position: relative;
+          opacity: 0.7; }
+          #container .main .formBox form .phoneBox .phone label i {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: transparent;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            opacity: 0.7;
+            transform: rotate(45deg) translateY(-50%);
+            position: absolute;
+            top: 22px;
+            right: 13px; }
+        #container .main .formBox form .phoneBox .phone .inputBox {
+          float: left;
+          width: 291px;
+          height: 50px;
+          border: 1px solid #dedede;
+          margin-left: -1px; }
+          #container .main .formBox form .phoneBox .phone .inputBox input {
+            line-height: 20px;
+            padding: 15px 0 15px 20px; }
+
+/*# sourceMappingURL=register.css.map */

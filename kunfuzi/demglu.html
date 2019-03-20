@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/dendlu.css"/>
+
+	<script src="cookieTools.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+	<div id="wwww">
+		<div class="w">
+			<div class="shouHear">
+				<a href="">
+					<img src="img/logo-220.png"/>
+				</a>
+				<div class="NewIdes">
+					<a	id="idSpandenlu" href=""></a>
+					<a href="">给新版提建议</a>
+				</div>
+			</div>
+		</div>
+		<div class="zhong">
+			<div class="deng">
+			
+				<div class="denglu">
+					<div class="zhuce">
+						<h1>登录</h1>
+						<span><a href="shoujidenglu.html">手机验证码登录</a></span>
+					</div>
+					<div class="inputText">
+						<form action="" method="post">
+							<div class="InpTx">
+								<input type="text" id="vipname" placeholder="请输入用户名" />
+								<span id="idSpandenlu">请输入用户名</span>
+							</div>
+							<div class="InpTx InpTxmima">
+								<input type="password" id="vippass" placeholder="请输入密码" />
+								<span>请输入密码</span>
+							</div>
+							<div class="InpTx InpTxRadio">
+								<input type="checkbox" id="" name="a" />
+								<p>下次自动登录</p>
+								<p id="span1">忘记密码</p>
+							</div>
+							<input id="sub" class="nLogin" type="button" value="登陆"/>
+							<div class="InpTx InpTxBotton" >
+								<a href="">
+									<img src="img/wei.png"/>
+									<div>微信</div>
+								</a>
+								<a href="">
+									<img src="img/QQ.png"/>
+									<div>QQ</div>
+								</a>
+								<a href="">
+									<img src="img/weibo.png"/>
+									<div>微博</div>
+								</a>
+								<a href="">  |  </a>
+								<div  id="lijizhuce" ><a href="zhuce.html">立即注册</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="foot">
+		<div class="footOn">
+			<span>© 2002-2017 Kongfz.com 孔夫子旧书网 版权所有 </span>
+			<span>
+				<a href="">关于孔网</a>
+				<a href="">联系我们</a>
+				<a href="">帮助中心</a>
+				<a href="">版权隐私</a>
+				<a href="">广告业务</a>
+				<a href="">工作机会</a>
+				<a href="">移动版</a>
+			</span>	
+		</div>
+	</div>
+	</body>
+</html>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+	var btnLogin = document.getElementsByClassName("nLogin")[0];
+    window.onload = function(){
+        btnLogin.onclick = function(){
+            let xhr = new XMLHttpRequest();
+            xhr.open("post","dengluCheck.php",true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    if(xhr.responseText=="0"){
+                        $("span1").style.display="block";
+                    }else{
+                        addCookie("vipname",$("vipname").value,7);
+                        alert("点击跳转到首页")
+                        location.href = "kunfu.html";
+                    }
+                }
+            }
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            let sendStr="vipname="+$("vipname").value+"&vippass="+$("vippass").value;
+            xhr.send(sendStr);
+        }
+    }
+</script>
+

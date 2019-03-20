@@ -1,0 +1,53 @@
+.box {
+  width: 100%;
+  border: 1px solid aquamarine;
+  margin: 5px auto; }
+  .box a {
+    display: inline-block;
+    width: 257px;
+    height: 400px;
+    margin: 5px auto;
+    border: 2px solid royalblue;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative; }
+    .box a .imgs {
+      display: inline-block;
+      margin-left: 26px;
+      width: 195px;
+      height: 280px;
+      padding: 5px;
+      border: 1px solid red;
+      position: relative; }
+      .box a .imgs img {
+        display: inline-block;
+        width: 195px;
+        height: 280px;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .box a ul {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 115px;
+      left: 100px; }
+    .box a ul li {
+      outline: none;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: yellowgreen; }
+    .box a p {
+      margin: 2px;
+      color: black;
+      font-size: 12px; }
+    .box a :hover {
+      opacity: 0.8;
+      transform: scale(1.1);
+      transform-origin: center left; }
+
+.Bottom .cen .uls:last-child {
+  width: 401px; }

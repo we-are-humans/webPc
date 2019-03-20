@@ -1,0 +1,33 @@
+@charset "utf-8"; 
+$baseFontSize:12px;
+
+@mixin hori-line($border:1px dashed #e1e1e1){
+	border-bottom:$border;
+}
+.checkall{
+	@include hori-line($border:1px solid #e1e1e1);
+}
+
+.duan{
+	p{
+		background:#c01a20;
+		font-size:$baseFontSize+2;
+		color:#ffffea;
+		width:120px;
+		height:28px;
+		text-align:center;
+		line-height:28px;
+	}
+}
+
+.checkall{
+	span{
+		color:#444444;
+		font-size:$baseFontSize;
+	}
+	p{
+		color:#444444;
+		font-size:$baseFontSize;
+		line-height:40px;
+	}
+}

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div id="header">
+    <div class="comWidth clearfix">
+        <div class="logo fl">
+            <a href="">
+                <img src="img/logo-201305-b.png" width="170px" height="60px" alt="">
+            </a>
+            <i></i>
+        </div>
+        <a href="" class="fr">
+            <img src="img/q-icon.png" alt="">
+            <span>登录页面，调查问卷</span>
+        </a>
+    </div>
+</div>
+<div id="section">
+    <div class="tips">
+        <i></i>
+        <p>
+            依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版
+            <a href="">《京东隐私政策》</a>
+            已上线，将更有利于保护您的个人隐私。
+        </p>
+    </div>
+    <div class="bannerBox">
+        <div class="banner">
+            <div class="login">
+                <div class="tips">
+                    <i></i>
+                    <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                </div>
+                <div class="tabs">
+                    <div class="tabs_tit">
+                        <a href="javascript:;" class="active ">扫码登录</a>
+                        <a href="javascript:;">账户登录</a>
+                    </div>
+                    <div class="tabs_body">
+                        <div class="tabs_con" style="display: block;">
+                            <div class="min">
+                                <img src="img/show.png" alt="">
+                                <img src="img/phone-orange.png" alt="">
+                            </div>
+                            <p class="ewm">
+                                打开<a style="color:red">手机京东</a>扫描二维码
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="one"></i>
+                                    <span>免输入</span>
+                                </li>
+                                <li>
+                                    <i class="two"></i>
+                                    <span>更快</span>
+                                </li>
+                                <li>
+                                    <i class="three"></i>
+                                    <span>更安全</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs_con">
+                            <form action="">
+                                <div class="item">
+                                    <label for="" class="label1"></label>
+                                    <p class="inputBox">
+                                        <input type="text" placeholder="邮箱/用户名/已验证手机">
+
+                                    </p>
+
+                                </div>
+                                <div class="item">
+
+                                    <label for="" class="label2"></label>
+                                    <p class="inputBox">
+                                        <input type="text" placeholder="密码">
+
+                                    </p>
+                                </div>
+                                <div class="forget">
+                                    <a href="">忘记密码</a>
+                                </div>
+                                <div class="btn">
+                                    <input type="button" value="登录" class="btn">
+                                </div>
+                            </form>
+                    </div>
+
+                    </div>
+                </div>
+                <div class="regMethod">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="a1"></i>
+                                <span>QQ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="a2"></i>
+                                <span>微信</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <b></b>
+                                <p>立即注册</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script>
+      let as=$(".tabs_tit a");
+      let min=$(".min")
+      let tabs_cons=$(".tabs_con");
+     as.on("click",function () {
+           let index=$(this).index();
+           $(this).addClass("active").siblings().removeClass("active");
+           tabs_cons.eq(index).show().siblings().hide()
+      })
+    min.on("mouseenter",function () {
+         min.find("img").eq(0).animate({
+             left:"30px"
+         },500)
+        min.find("img").eq(1).css({
+            transitionDelay:"0.5s"
+       })
+        min.find("img").eq(1).css({
+             transform:"scale(1)"
+        })
+
+    })
+    min.on("mouseleave",function () {
+        min.find("img").eq(1).css({
+            transform:"scale(0)"
+        })
+        min.find("img").eq(1).css({
+            transitionDelay:""
+        })
+        min.find("img").eq(0).animate({
+            left:"80px"
+        },500)
+
+
+    })
+</script>

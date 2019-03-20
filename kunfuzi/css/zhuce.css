@@ -1,0 +1,341 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td,span,img{
+	margin:0;
+	padding:0;
+	}
+a{
+	text-decoration: none;
+	color: #333;
+	}
+ul,li,input,select,option,div{
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+input{
+	border-color:white ;
+	border-style: none;
+}
+body{
+	background: #EBEBEB;
+}
+/*----------*/
+.denglu:nth-of-type(3){
+	background: #EBEBEB;
+	display: none;
+}
+/*----------------*/
+.denglu:nth-of-type(1){
+	/*background: #EBEBEB;*/
+	/*display: none;*/
+}
+
+/*----------*/
+.denglu:nth-of-type(2){
+	background: #EBEBEB;
+	display: none;
+}
+
+/*body{
+	position: fixed;
+	background: rgba(0,0,0,0.6);
+	 top: 0px; 
+	left: 0px; 
+	z-index: 100000000;
+	 width: 100%;
+	  height: 100%;
+	  opacity: 0.5;
+	  }*/
+#wwww{
+	display: block;
+	width: 100%;
+	/*height: 150px;*/
+	/*background: #CCCCCC;*/
+	border-bottom: 1px solid #999999;
+}	 
+.shouHear{
+	display: block;
+	width: 1200px;
+	height: 79px;
+	/*background: #A52A2A;*/
+	margin: 0 auto;
+    padding: 0 96px;
+}	
+
+
+.shouHear a img{
+	
+	width: 206px;
+	height: 36px;
+	float: left;
+}	
+.shouHear a{
+	margin: 20px 0;
+	width: 206px;
+	height: 40px;
+	float: left;
+}	
+.NewIdes{
+	display: inline-block;
+	width: 150px;
+	    height: 79px;
+	float: right;
+}		
+.NewIdes a{
+	/*background: #0057A0;*/
+	font-size: 14px;
+	padding-top: 37px;
+    width: 112px;
+    height: 21px;
+    color: #999999;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+.deng{
+	position: absolute;
+	left: 12%;
+
+	margin: 1px auto;
+	width: 400px;
+	/*display: none;*/
+	
+}
+.denglu{
+	/*background: #f2f3f3;*/
+	position: absolute;
+	width: 400px;
+	padding: 45px 50px;
+	margin: 0 auto;
+}
+
+
+.zhuce h1{
+	display: inline-block;
+	width: 100px;
+	/*height: 35px;*/
+    /*line-height: 35px;*/
+    /*font-size: 30px;*/
+    color: #333;
+    font-weight: 500;
+	float:left;
+}
+.zhuce span{
+	/*background: #999999;*/
+	display: inline-block;
+	float: right;
+	padding-top: 25px;
+	font-size: 12px;
+    color: #666;
+	
+}
+.zhuce{
+	display: inline-block;
+	width: 298px;
+	height: auto;
+}
+.inputText {
+	margin-top: 20px;
+	display: block;
+	height: auto;
+	width: 300px;
+	/*background: #DCDCDC;*/
+}
+.inputText form{
+	display: block;
+	height: auto;
+	width: 300px;
+	/*background: #DCDCDC;*/
+}
+.InpTx{
+	position: relative;
+}
+.InpTx  input{
+	width: 300px;
+	padding: 13px;
+	border:1px solid #999999 ;
+	border-top:0px ;
+
+}
+.InpTx:first-child  input:first-child{
+	
+	border-top:1px solid #999999  ;
+
+}
+.InpTx span{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+	font-size: 13px;
+    color: #d13333;
+}
+
+.InpTx span:nth-of-type(2){
+	position: absolute;
+	top: 10px;
+	right: 50px;
+	z-index: 10;
+}
+.InpTx:nth-of-type(2) span:nth-of-type(1){
+	
+	color: #999;
+}
+.InpTxHidden{
+	display: none;
+	margin-bottom: 30px;
+}
+
+.InpTxHidText{
+	color: #666;
+	font-size: 13px;
+	padding-top: 10px;
+	/*display: none;*/
+	margin-bottom: 30px;
+}
+#sub{
+	width: 300px;
+	height: 40px;
+	background: #A52A2A;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 2px;
+}
+
+/*---------------*/
+
+.InpTxRadio input{
+	/*display: none;*/
+	margin-top: 14px;
+	width: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.InpTxRadio p:nth-of-type(1){
+	/*display: none;*/
+	font-size: 12px;
+	width: 120px;
+	margin-top: 12px;
+
+	float: left;
+}
+.InpTxRadio p:nth-of-type(2){
+	/*display: none;*/
+	margin-top: 12px;
+	float: right;
+	font-size: 12px;
+	width: 50px;
+
+}
+.denglu .inputText .InpTxmima span{
+	color: #d13333;
+}
+.InpTxBotton{
+	margin-top: 20px;
+	font-size: 12px;
+}
+.InpTxBotton a{
+	display: inline-block;
+	width: 70px;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	
+}
+.InpTxBotton img{
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.InpTxBotton div{
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	float: left;
+}
+
+.InpTxBotton a:nth-of-type(4){
+	width: 20px;
+	height: 30px;
+}
+#lijizhuce{
+    width: 70px;
+    padding-top: 8px;
+    padding-left: 22px;
+}
+
+
+.yanzhenceshi span:nth-of-type(3){
+	position: absolute;
+	right: 130px;
+}
+.InpTxXieYI input{
+
+	margin-top: 18px;
+	width: 20px;
+	margin-bottom: 24px;
+	float: left;
+}
+.InpTxXieYI p{
+	font-size: 12px;
+	padding-top: 16px;
+}
+.InpTxXieYI p a{
+	color:royalblue;
+}
+
+.foot{
+	display: block;
+	
+}
+.footOn{
+	width: 1200px;
+	margin: 0 auto;
+	height: 30px;
+	
+}
+.footOn span{
+	display: inline-block;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666666;
+	height: 30px;
+	
+}
+.footOn span:first-of-type{
+	float: left;
+	
+}
+.footOn span:last-of-type{
+	float: right;	
+}
+
+.footOn span a{
+	display: inline-block;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666666;
+	height: 30px;
+	float: left;
+	margin: 0 3px;	
+}
+.zhong{
+	display: inline-block;
+	width: 1200px;
+	height: 540px;
+}
+.w{
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px solid #666666;
+}

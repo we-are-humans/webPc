@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/goodsCar.css"/>
+	</head>
+	<body>
+		<!--header-->
+		<header>
+			<img src="img/logo.jpg">
+			<span>购物车</span>
+		</header>
+		<!--nav-->
+		<nav>
+			<h2>全部商品</h2>
+		</nav>
+		
+		<!--content-->
+		 <div class="box"> 
+              <table> 
+                <thead class="tb_head"> 
+                  <th class="check"><input type="checkbox" id="checkedAll"/>选择</th> 
+                  <th class="info">商品信息</th> 
+                  <th>单价</th> 
+                  <th>数量</th> 
+                  <th>商品有效期</th> 
+                  <th>金额</th>
+                  <th>操作</th> 
+                </thead> 
+                <tbody id="tb" class="tb_tr"> 
+                  <tr style="border-collapse:collapse"> 
+                      <td><input type="checkbox" /></td> 
+                      <td>
+                          <div class="goodsContent">
+                              <img src="img/goodsInformation.jpg"><span>妙可蓝多 黄车达奶酪丝2kg/袋 6袋/箱</span>
+                          </div>          
+                      </td> 
+                      <td>￥<span>132.00</span></td> 
+                      <td class="jishu"> 
+                        <span class="jian">-</span> 
+                        <input type="text" value="1" readonly="readonly"/> 
+                        <span class="jia">+</span> 
+                      </td> 
+                      <td> 
+                        <span>有库存</span> 
+                      </td> 
+                      <td>￥<span>132.00</span></td>
+                      <td> 
+                        <a href="#"></a> 
+                      </td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+              <div class="jg">
+                <div><i></i><a href="##">继续购物</a></div>
+                <div class="zj">
+                  <p>共计<span>1</span>件商品&nbsp;&nbsp;合计：￥<span id="result">132.0</span></p>
+                  <p>去结账</p>
+                </div>
+              </div>
+          </div> 
+	</body>
+</html>
+<script> 
+	
+          window.onload=function(){ 
+            var checkedAll=document.getElementById("checkedAll") 
+            var tb=document.getElementById("tb") 
+            var oinput=tb.getElementsByTagName('input') 
+            var jian=document.getElementsByClassName('jian') 
+            var jia=document.getElementsByClassName('jia') 
+            var shanchu=tb.getElementsByTagName('a') 
+              
+            //全
+            checkedAll.onclick=function(){ 
+              for(var i=0;i<oinput.length;i++){ 
+                oinput[i].checked=this.checked;
+              } 
+            } 
+            //当下级有一个没有选中时那么全选按钮则为false状态 
+            for(var i=0;i<oinput.length;i++){ 
+              oinput[i].onclick=function(){ 
+                var qx=true
+                for(var i=0;i<oinput.length;i++){ 
+                  if(oinput[i].checked==false){ 
+                    qx=false
+                  } 
+                } 
+                checkedAll.checked=qx
+              } 
+            } 
+            checkedAll.onclick=function(){ 
+              for(var i=0;i<oinput.length;i++){ 
+                oinput[i].checked=this.checked 
+              } 
+          }
+          
+          //加 
+          for(var i=0;i<jia.length;i++){ 
+            jia[i].onclick=function(){ 
+              //previousSibling上一个兄弟节点  
+              
+              var val  = parseInt(this.previousSibling.previousSibling.value);
+              this.previousSibling.previousSibling.value = val + 1; 
+              console.log(val);
+              jisuan(this);
+            } 
+              
+          } 
+            //减 
+            for(var i=0;i<jian.length;i++){ 
+              jian[i].onclick=function(){ 
+                //nextSibling下一个兄弟节点 
+                var val = parseInt(this.nextSibling.nextSibling.value); 
+                if(val > 1) { 
+                  this.nextSibling.nextSibling.value = val - 1; 
+                } 
+                jisuan(this);
+              } 
+            } 
+            //操作删除 
+              
+            for(var i=0;i<shanchu.length;i++){ 
+              shanchu[i].onclick=function(){ 
+                var conf = confirm('确定删除这件商品吗？'); 
+                if(conf) { 
+                //removeChild 删除节点  
+                  tb.removeChild(this.parentNode.parentNode);  
+                } 
+              } 
+            } 
+              
+            //总价 
+            function jisuan(t){ 
+              var tr=t.parentNode.parentNode;  
+              var result=document.getElementById("result"); 
+              var td=tr.getElementsByTagName('td');
+              var num = td[2].getElementsByTagName("span")[0];
+              td[5].getElementsByTagName('span')[0].innerHTML = parseInt(num.innerHTML)*parseInt(t.parentNode.getElementsByTagName('input')[0].value);
+              //总件数
+              for(let i=0; i<num.length; i++){
+                  var count = parseInt(getElementsByClassName("zj")[0].getElementsByTagName("span")[0]).innerHTML;
+                  console.log(count);
+                    count +=num.innerHTML;
+                  }
+
+            } 
+          } 
+ </script> 
